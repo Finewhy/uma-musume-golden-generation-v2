@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="id" data-t="day"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>黄金世代 Mading Golden Generation 1998</title>
+<script src="loader.js"></script>
+<link rel="stylesheet" href="jadul.css">
+<style>
+section{margin-bottom:3.4rem;position:relative;scroll-margin-top:90px}
+.grid{display:grid;gap:2rem 1.6rem;grid-template-columns:repeat(auto-fill,minmax(210px,1fr))}
+.hero{display:grid;gap:1.8rem;grid-template-columns:1.4fr 1fr;align-items:start;margin-bottom:3.4rem}
+@media(max-width:820px){.hero{grid-template-columns:1fr}}
+.big{font:clamp(2.6rem,9vw,5.4rem)/1 var(--f3);letter-spacing:.1em;color:var(--acc);text-shadow:3px 3px 0 #fff,6px 6px 0 rgba(0,0,0,.15)}
+.nums{display:flex;gap:1rem;flex-wrap:wrap;margin-top:1rem}.nums .note{padding:.6rem 1rem;text-align:center}.nums b{font:2rem var(--f3);display:block;color:var(--acc)}
+.mem{display:block;text-decoration:none;color:inherit;--r:var(--rr)}.mem .polaroid{transition:.3s}
+.mem small{display:block;font-size:.72rem;opacity:.75}.mem .tag{position:absolute;top:.9rem;right:-.6rem;background:var(--c);color:#fff;font-size:.7rem;padding:.1rem .6rem;rotate:4deg;box-shadow:2px 2px 0 #0003;z-index:3}
+.duel{display:grid;gap:1.2rem;grid-template-columns:1fr auto 1fr;align-items:start}
+@media(max-width:700px){.duel{grid-template-columns:1fr}.vs{justify-self:center}}
+.vs{font:2.6rem var(--f3);color:var(--acc);text-shadow:2px 2px #fff;align-self:center;animation:wob 1s infinite alternate}
+select{font:1rem var(--f2);padding:.3rem;width:100%;border:2px solid var(--ink);background:#fff;margin-bottom:.8rem}
+.row{display:flex;justify-content:space-between;gap:.6rem;border-bottom:1px dashed #0004;padding:.2rem 0;font-size:.88rem}.row.win b{color:var(--acc)}.row.win b::after{content:" ★"}
+.line{position:relative;display:flex;gap:1.6rem;overflow-x:auto;padding:2.8rem 1.2rem 1.4rem;scroll-snap-type:x proximity}
+.line::before{content:"";position:absolute;left:0;right:0;top:1.2rem;height:3px;background:#f4e7c8;box-shadow:0 3px 0 #0003;min-width:var(--wd)}
+.line .note{flex:0 0 190px;scroll-snap-align:center;padding-top:1.4rem}
+.line .y{font:1.5rem var(--f3);color:var(--acc)}
+table{width:100%;border-collapse:collapse;font-size:.88rem}th,td{padding:.55rem .6rem;text-align:left;border-bottom:1px solid #0003;vertical-align:top}th{font-family:var(--f3);font-weight:400;border-bottom:3px double var(--acc)}tr:hover td{background:#ffe08055}
+.x{overflow-x:auto}
+.foot{text-align:center;margin-top:1rem}.foot .sign{font-size:1.1rem}
+</style></head><body>
+<header class="plank"><a class="logo" href="index.html">黄金世代 掲示板</a>
+<a class="l hm" href="#members">Anggota</a><a class="l hm" href="#duel">Duel</a><a class="l hm" href="#timeline">Sejarah</a><a class="l hm" href="#matrix">Data</a><button class="tg"></button></header>
+<main class="board">
+<section class="hero">
+ <div class="note tp rv" style="--r:-1.2deg;padding:2rem 1.8rem"><span class="stamp" style="position:absolute;right:1rem;top:1rem">1998年度</span>
+  <p class="hand" style="font-size:1.1rem">お知らせ ・ PENGUMUMAN</p><h1 class="big">黄金世代</h1>
+  <h2 class="tt" style="font-size:1.4rem;margin:.3rem 0 1rem">Golden Generation</h2>
+  <p class="hand" style="font-size:1.15rem;min-height:5.4em" data-type="Lima gadis kuda legendaris dari satu musim klasik yang mengubah sejarah Tracen Academy. Tempel, baca, dan kenali mereka satu per satu di mading ini. Klik fotonya untuk membuka buku kenangan masing-masing!"></p>
+  <div class="nums"><div class="note y" style="--r:2deg"><b data-n="5">0</b>Bintang</div><div class="note b" style="--r:-2deg"><b>1998</b>Era Klasik</div><div class="note g" style="--r:1.5deg"><b data-n="13">0</b>Gelar G1</div></div>
+  <span class="sticker" style="right:-1rem;bottom:-1.2rem;--sz:3rem;--r:10deg">🌸</span></div>
+ <div style="display:grid;gap:1.4rem">
+  <div class="note p rv" style="--r:2.4deg;--d:.15s"><h3 class="tt">📣 Dicari Trainer!</h3><p class="hand">Gadis berbakat menunggu bimbingan. Hubungi ruang OSIS Tracen sepulang sekolah. Bawa wortel.</p></div>
+  <div class="note y rv lined" style="--r:-2deg;--d:.3s"><h3 class="tt">🍚 Info Kantin</h3><p class="hand">Hari ini Oomori diskon 20%. Special W. dimohon jangan menghabiskan semuanya.</p></div>
+  <div class="note b rv" style="--r:1.4deg;--d:.45s"><h3 class="tt">🎣 Klub Memancing</h3><p class="hand">Rapat di kolam belakang sekolah. Yang telat tidur siang dimaafkan.</p></div></div>
+</section>
+<section id="members"><h2 class="sign rv">★ ANGGOTA ★</h2>
+<div id="chips" style="display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1.6rem"></div><div class="grid" id="grid"></div></section>
+<section id="duel"><h2 class="sign rv">⚔ DUEL ⚔</h2><div class="duel" id="duelbox"></div></section>
+<section id="timeline"><h2 class="sign rv">📅 SEJARAH KEJAYAAN</h2><div class="line" id="line"></div></section>
+<section id="matrix"><h2 class="sign rv">📋 DATA SISWA</h2><div class="note lined rv x" style="--r:-.4deg;--sd:9s"><table id="tbl"></table></div></section>
+<div class="foot"><div class="sign">黄金</div><p class="hand" style="color:#fff7dc;text-shadow:2px 2px #0006">Dipersembahkan untuk seluruh fans Golden Generation 1998 • Uma Musume: Pretty Derby<br>@Finwahyu • Mading Digital</p></div>
+</main>
+<script src="jadul.js"></script><script>
+const G=[
+            {
+                id: 0,
+                name: "Special Week",
+                jpName: "スペシャルウィーク",
+                title: "Bintang Harapan Jepang (Japan's Hope)",
+                va: "Waki Azumi (和氣あず未)",
+                origin: "Hokkaido",
+                birthday: "2 Mei",
+                heightBwh: "158 cm | B79-W57-H81",
+                aptitude: "Turf (A) • Medium (A) • Long (A)",
+                styleTag: "Senko",
+                styleLabel: "Pace Chaser / Betweener",
+                color: "#ec4899",
+                img: "https://umamusu.wiki/w/images/6/63/Game_Asset_chara_stand_1001_100101.png",
+                g1Titles: ["Japan Derby (1998)", "Tenno Sho Spring/Fall (1999)", "Japan Cup (1999)"],
+                skill: "Shooting Star (Shooting☆Star)",
+                bio: "Kuda betina berbakat asal Hokkaido yang dibesarkan oleh dua ibu. Memiliki impian menjadi gadis kuda nomor satu di Jepang.",
+                fileLink: "specialweek.html"
+            },
+            {
+                id: 1,
+                name: "Grass Wonder",
+                jpName: "グラスワンダー",
+                title: "Api Dingin Yamato Nadeshiko",
+                va: "Maeda Rena (前田玲奈)",
+                origin: "USA (Kentucky)",
+                birthday: "18 September",
+                heightBwh: "152 cm | B77-W53-H84",
+                aptitude: "Turf (A) • Medium (A) • Long (A)",
+                styleTag: "Sashi",
+                styleLabel: "Betweener (差し)",
+                color: "#3b82f6",
+                img: "https://umamusu.wiki/w/images/0/0a/Game_Asset_chara_stand_1011_101101.png",
+                g1Titles: ["Arima Kinen (1998, 1999)", "Takarazuka Kinen (1999)", "Asahi Hai (1997)"],
+                skill: "Spirit of the Phoenix (精神一到)",
+                bio: "Lahir di Amerika, dibesarkan dengan tradisi Jepang yang kental. Sosok ramah namun memiliki daya tempur membara bagai Phoenix.",
+                fileLink: "grasswonder.html"
+            },
+            {
+                id: 2,
+                name: "El Condor Pasa",
+                jpName: "エルコンドルパサー",
+                title: "Penakluk Dunia Bertengkorak (World Challenger)",
+                va: "Takahashi Minami (高橋未奈美)",
+                origin: "USA",
+                birthday: "17 Maret",
+                heightBwh: "163 cm | B89-W58-H86",
+                aptitude: "Turf (A) • Dirt (A) • Mile (A)",
+                styleTag: "Senko",
+                styleLabel: "Pace Chaser / Leader",
+                color: "#ef4444",
+                img: "https://umamusu.wiki/w/images/a/aa/Game_Asset_chara_stand_1014_101401.png",
+                g1Titles: ["NHK Mile Cup (1998)", "Japan Cup (1998)", "Prix de l'Arc de Triomphe 2nd (1999)"],
+                skill: "Condor Plume (Plan de El Condor)",
+                bio: "Gadis bertopeng lucha libre yang penuh semangat dan energi membara. Bertekad membuktikan kemampuannya di panggung balap internasional.",
+                fileLink: "elcondorpasa.html"
+            },
+            {
+                id: 3,
+                name: "Seiun Sky",
+                jpName: "セイウンスカイ",
+                title: "Ahli Taktik Awan Biru (Trickster Master)",
+                va: "Kito Akari (鬼頭明里)",
+                origin: "Aomori",
+                birthday: "26 April",
+                heightBwh: "155 cm | B77-W55-H80",
+                aptitude: "Turf (A) • Medium (A) • Long (A)",
+                styleTag: "Nige",
+                styleLabel: "Front-runner (逃げ)",
+                color: "#10b981",
+                img: "https://umamusu.wiki/w/images/b/b0/Game_Asset_chara_stand_1020_102001.png",
+                g1Titles: ["Satsuki Sho (1998)", "Kikuka Sho (1998)"],
+                skill: "Angling x Scheming (アングリング×スキーミング)",
+                bio: "Sering terlihat santai dan suka memancing, namun di lintasan pacu ia adalah jenius taktik yang tak terduga dalam memimpin kecepatan.",
+                fileLink: "seiunsky.html"
+            },
+            {
+                id: 4,
+                name: "King Halo",
+                jpName: "キングヘイロー",
+                title: "Kebanggaan Yang Tak Tertundukkan (Unyielding Pride)",
+                va: "Saeki Iori (佐伯伊織)",
+                origin: "Hokkaido",
+                birthday: "28 April",
+                heightBwh: "159 cm | B85-W56-H82",
+                aptitude: "Turf (A) • Short (A) • Mile (A)",
+                styleTag: "Oikomi",
+                styleLabel: "Chaser / Sprinter (追込)",
+                color: "#8b5cf6",
+                img: "https://umamusu.wiki/w/images/f/fa/Game_Asset_chara_stand_1061_106101.png",
+                g1Titles: ["Takamatsunomiya Kinen (2000)"],
+                skill: "Pride of King (Call me KING)",
+                bio: "Putri dari keluarga terpandang dengan harga diri tinggi. Terus berjuang melampaui berbagai kekalahan hingga meraih mahkota kejayaannya.",
+                fileLink: "kinghalo.html"
+            }
+        ]
+const $=s=>document.querySelector(s),pk=['#ec4899','#3b82f6','#ef4444','#10b981','#8b5cf6'];
+const tags=[...new Set(G.map(m=>m.styleLabel))];
+$('#chips').innerHTML=['Semua',...tags].map((t,i)=>`<button class="chip${i?'':' on'}" data-t="${i?t:''}">${t}</button>`).join('');
+function grid(f){$('#grid').innerHTML=G.filter(m=>!f||m.styleLabel===f).map((m,i)=>`<a class="mem rv" href="${m.fileLink}" style="--rr:${[-2.5,1.8,-1.2,2.4,-2][i%5]}deg;--c:${m.color};--d:${i*.1}s;--sd:${4+i*.7}s"><div class="note tp" style="padding:.6rem .6rem 1rem;--pin:${m.color}"><div class="polaroid" style="padding:.3rem .3rem 2.3rem"><span class="tag">${m.styleTag}</span><div class="ph" style="--bg:linear-gradient(160deg,${m.color}55,#fff)"><img src="${m.img}" alt="${m.name}" loading="lazy" onerror="this.src='https://placehold.co/300x400/fde/333?text=${encodeURIComponent(m.name)}'"></div><span class="cap">${m.name}</span></div><p class="hand" style="margin-top:.6rem;font-size:.9rem;line-height:1.35"><b>${m.jpName}</b><small>${m.title}</small><small>🎂 ${m.birthday} • 📍 ${m.origin}</small></p></div></a>`).join('');ggObserve($('#grid'))}
+grid('');$('#chips').onclick=e=>{const b=e.target.closest('.chip');if(!b)return;document.querySelectorAll('.chip').forEach(c=>c.classList.toggle('on',c===b));grid(b.dataset.t)};
+const opt=s=>G.map((m,i)=>`<option value="${i}"${i===s?' selected':''}>${m.name}</option>`).join('');
+$('#duelbox').innerHTML=`<div class="note tp rv" style="--r:-1.5deg" id="da"></div><div class="vs">VS</div><div class="note tp rv" style="--r:1.5deg;--d:.2s" id="db"></div>`;
+function duel(){const a=G[sa.value],b=G[sb.value],h=m=>parseInt(m.heightBwh),R=[['Tinggi',h(a),h(b),' cm'],['Gelar G1',a.g1Titles.length,b.g1Titles.length,'']];
+ const side=(m,o,i)=>`<img src="${m.img}" alt="" style="height:180px;display:block;margin:0 auto .4rem;object-fit:contain;animation:wob 3s infinite alternate"><h3 class="tt" style="text-align:center">${m.name}</h3><p class="hand" style="text-align:center">${m.jpName}</p>`+R.map(r=>`<div class="row${r[1+i]>r[2-i]?' win':''}"><span>${r[0]}</span><b>${r[1+i]}${r[3]}</b></div>`).join('')+`<div class="row"><span>Taktik</span><b>${m.styleTag}</b></div><div class="row"><span>Skill</span><b style="text-align:right">${m.skill}</b></div><div class="row"><span>Asal</span><b>${m.origin}</b></div>`;
+ da.querySelector('.d').innerHTML=side(a,b,0);db.querySelector('.d').innerHTML=side(b,a,1)}
+const da=$('#da'),db=$('#db');da.innerHTML='<select id="sa">'+opt(0)+'</select><div class="d"></div>';db.innerHTML='<select id="sb">'+opt(1)+'</select><div class="d"></div>';
+const sa=$('#sa'),sb=$('#sb');sa.onchange=sb.onchange=duel;duel();
+const ev=[];G.forEach(m=>m.g1Titles.forEach(t=>{const y=(t.match(/\((\d{4})/)||[])[1];if(y)ev.push([y,t.replace(/\s*\(.*/,''),m])}));ev.sort((x,y)=>x[0]-y[0]);
+$('#line').style.setProperty('--wd',ev.length*210+'px');
+$('#line').innerHTML=ev.map((e,i)=>`<div class="note rv ${['y','b','p','g'][i%4]}" style="--r:${[-2,1.6,-1,2.2][i%4]}deg;--pin:${e[2].color};--d:${i*.08}s"><div class="y">${e[0]}</div><b class="hand">${e[1]}</b><p class="hand" style="font-size:.85rem">oleh ${e[2].name}</p></div>`).join('');
+$('#tbl').innerHTML='<tr><th>Nama</th><th>Taktik</th><th>G1</th><th>Gelar utama</th><th>Skill</th></tr>'+G.map(m=>`<tr><td><b style="color:${m.color}">${m.name}</b><br><small>${m.jpName}</small></td><td>${m.styleLabel}</td><td>${m.g1Titles.length}</td><td>${m.g1Titles.join(', ')}</td><td>${m.skill}</td></tr>`).join('');
+document.querySelectorAll('[data-n]').forEach(e=>{new IntersectionObserver((es,o)=>{if(es[0].isIntersecting){ggCount(e,+e.dataset.n);o.disconnect()}}).observe(e)});
+ggObserve();</script></body></html>
